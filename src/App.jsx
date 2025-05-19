@@ -9,6 +9,8 @@ import Weather from "./component/part4";
 import Style from "./component/Part5";
 import Stylecard from "./component/Part6";
 import Content from "./component/Part7";
+import Data from "./component/part8";
+import Movies from "./component/part9";
 import Userstatus from "./component/Userstatus";
 import "./index.css";
 import { WiAlien } from "react-icons/wi";
@@ -28,6 +30,8 @@ return (
 <h2>hello  <WiAlien style={{color:"red"}} /></h2>
 <Stylecard/>
 <Content/>
+<Data/>
+<Movies/>
 </div>
 )
 }
