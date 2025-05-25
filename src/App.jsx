@@ -14,6 +14,8 @@ import Movies from "./component/part9";
 import Userstatus from "./component/Userstatus";
 import "./index.css";
 import { WiAlien } from "react-icons/wi";
+import Practice from "./practice";
+import Todo from "./component/part10";
 const App= () =>{
 return ( 
 <div>
@@ -32,6 +34,8 @@ return (
 <Content/>
 <Data/>
 <Movies/>
+<Practice/>
+<Todo/>
 </div>
 )
 }
