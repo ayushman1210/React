@@ -14,8 +14,14 @@ import Movies from "./component/part9";
 import Userstatus from "./component/Userstatus";
 import "./index.css";
 import { WiAlien } from "react-icons/wi";
-import Practice from "./practice";
+import Practice from "./component/practice";
 import Todo from "./component/part10";
+// import Copycontent from "./component/part12";
+import Part13 from "./component/part13";
+import Part14 from "./component/part14";
+import Part15 from "./component/part15";
+import Countereffect from "./component/countereffect";
+import Fetch from "./component/fetchdataeffect";
 const App= () =>{
 return ( 
 <div>
@@ -34,8 +40,14 @@ return (
 <Content/>
 <Data/>
 <Movies/>
-<Practice/>
 <Todo/>
+{/* <Copycontent /> */}
+<Practice/>
+<Part13/>
+<Part14/>
+<Part15/>
+<Countereffect/>
+<Fetch/>
 </div>
 )
 }
