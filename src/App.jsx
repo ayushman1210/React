@@ -22,9 +22,42 @@ import Part14 from "./component/part14";
 import Part15 from "./component/part15";
 import Countereffect from "./component/countereffect";
 import Fetch from "./component/fetchdataeffect";
+
+//context Api
+import { createContext } from "react";
+export const Data4=createContext();
+import Part16 from "./component/Part16";
+import Compo16 from "./Compo16";
+import Compo17 from "./component/Compo17";
+
+// useReducer
+import { useReducer } from "react";
+import Part18 from "./component/part18";
+
+
+
+const initialState={count:0};
+const reducer=(state,action)=>{
+switch (action.type) {
+    case 'increment':
+        return {...state, count:state.count+1};
+        case 'decrement':
+            return {...state, count:state.count-1};
+ case"reset":
+ return {...state,count:0}
+    default:
+        state;
+}
+}
 const App= () =>{
+    const Name="ayushman";
+const [state,dispatch]= useReducer(reducer,initialState);
 return ( 
 <div>
+    <button onClick={()=>dispatch({type:"increment"})}>+</button>
+     <button onClick={()=>dispatch({type:"decrement"})}>-</button>
+      <button onClick={()=>dispatch({type:"reset"})}>reset</button>
+    <h1>{state.count}</h1>
 <Header/>
 <Main/>
 <Part1/>
@@ -48,6 +81,14 @@ return (
 <Part15/>
 <Countereffect/>
 <Fetch/>
+<div>
+    <Data4.Provider value={Name}>
+    <Part16 />
+    <Compo16/>
+    <Compo17/>
+    </Data4.Provider>
+    </div>
+<Part18/>
 </div>
 )
 }
